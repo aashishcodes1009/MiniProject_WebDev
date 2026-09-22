@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h1>WEB DEVELOPMENT MINOR PROJECT</h1>
+
+      <section class="crud-section" aria-label="CRUD application form and records">
+        <div class="section-header">
+            <h2>Student Records</h2>
+          <span id="recordCount">0 records</span>
+        </div>
+
+        <form id="studentForm" class="student-form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter student name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Enter email address" required />
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="Enter phone number" required />
+          </div>
+
+          <div class="form-row">
+            <label for="course">Course</label>
+            <input id="course" name="course" type="text" placeholder="Enter course" required />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="submitBtn">Add Student</button>
+            <button type="button" id="cancelBtn" class="secondary hidden">Cancel</button>
+          </div>
+        </form>
+
+        <div class="toolbar">
+          <input id="searchInput" type="search" placeholder="Search students..." aria-label="Search students" />
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Course</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
